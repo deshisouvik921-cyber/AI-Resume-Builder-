@@ -230,3 +230,19 @@ button {
   }
 
 }
+.site-footer {
+  text-align: center;
+  background: #111827;
+  color: #cbd5e1;
+  padding: 25px 15px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.site-footer strong {
+  color: white;
+  font-size: 15px;
+  }
+
+
+    
