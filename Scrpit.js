@@ -1,6 +1,30 @@
 function getValue(id) {
   return document.getElementById(id).value.trim();
 }
+function previewPhoto(event) {
+
+  const file = event.target.files[0];
+
+  if (!file) return;
+
+  if (!file.type.startsWith("image/")) {
+    alert("Please select an image.");
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+
+    const photo = document.getElementById("r-photo");
+
+    photo.src = e.target.result;
+    photo.style.display = "block";
+
+  };
+
+  reader.readAsDataURL(file);
+}
 
 
 function updateResume() {
