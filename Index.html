@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🤖 AI Resume Builder</h1>
+  <p>Create your professional resume in minutes</p>
+</header>
+
+<main class="container">
+
+  <!-- FORM -->
+  <section class="form-box">
+
+    <h2>Enter Your Details</h2>
+
+    <label>Full Name</label>
+    <input type="text" id="name" placeholder="Souvik Das">
+
+    <label>Professional Title</label>
+    <input type="text" id="title" placeholder="Web Developer">
+
+    <label>Email</label>
+    <input type="email" id="email" placeholder="example@gmail.com">
+
+    <label>Phone</label>
+    <input type="text" id="phone" placeholder="+91 9876543210">
+
+    <label>Location</label>
+    <input type="text" id="location" placeholder="West Bengal, India">
+
+    <label>LinkedIn</label>
+    <input type="text" id="linkedin" placeholder="linkedin.com/in/yourname">
+
+    <label>GitHub</label>
+    <input type="text" id="github" placeholder="github.com/yourname">
+
+    <label>Career Objective</label>
+    <textarea id="objective"
+      placeholder="Write your career objective..."></textarea>
+
+    <button class="ai-btn" onclick="generateSummary()">
+      ✨ Generate AI Summary
+    </button>
+
+    <label>Education</label>
+    <textarea id="education"
+      placeholder="B.Tech in Electrical Engineering&#10;ABC College&#10;2026 - 2030"></textarea>
+
+    <label>Skills</label>
+    <textarea id="skills"
+      placeholder="HTML, CSS, JavaScript, React, GitHub"></textarea>
+
+    <label>Projects</label>
+    <textarea id="projects"
+      placeholder="Snake Game - HTML, CSS, JavaScript&#10;Expense Tracker - JavaScript"></textarea>
+
+    <label>Experience</label>
+    <textarea id="experience"
+      placeholder="Internship / Freelance / Work Experience"></textarea>
+
+    <label>Certificates</label>
+    <textarea id="certificates"
+      placeholder="Web Development Certificate&#10;Python Certificate"></textarea>
+
+    <div class="buttons">
+      <button onclick="updateResume()">🔄 Update Resume</button>
+      <button onclick="clearForm()" class="clear">Clear</button>
+    </div>
+
+  </section>
+
+
+  <!-- RESUME PREVIEW -->
+  <section class="preview-box">
+
+    <div class="resume" id="resume">
+
+      <div class="resume-header">
+        <h1 id="r-name">Your Name</h1>
+        <h3 id="r-title">Professional Title</h3>
+
+        <p>
+          <span id="r-email">email@example.com</span>
+          |
+          <span id="r-phone">+91 XXXXX XXXXX</span>
+          |
+          <span id="r-location">India</span>
+        </p>
+
+        <p>
+          <a id="r-linkedin" href="#" target="_blank">LinkedIn</a>
+          |
+          <a id="r-github" href="#" target="_blank">GitHub</a>
+        </p>
+      </div>
+
+
+      <div class="resume-section">
+        <h2>PROFILE</h2>
+        <p id="r-summary">
+          Your professional summary will appear here.
+        </p>
+      </div>
+
+
+      <div class="resume-section">
+        <h2>EDUCATION</h2>
+        <p id="r-education">Your education details</p>
+      </div>
+
+
+      <div class="resume-section">
+        <h2>SKILLS</h2>
+        <div id="r-skills" class="skill-list">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+
+
+      <div class="resume-section">
+        <h2>PROJECTS</h2>
+        <div id="r-projects">
+          Your projects will appear here.
+        </div>
+      </div>
+
+
+      <div class="resume-section">
+        <h2>EXPERIENCE</h2>
+        <p id="r-experience">
+          Your experience will appear here.
+        </p>
+      </div>
+
+
+      <div class="resume-section">
+        <h2>CERTIFICATES</h2>
+        <p id="r-certificates">
+          Your certificates will appear here.
+        </p>
+      </div>
+
+    </div>
+
+    <button class="download" onclick="downloadResume()">
+      📄 Download / Save as PDF
+    </button>
+
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
